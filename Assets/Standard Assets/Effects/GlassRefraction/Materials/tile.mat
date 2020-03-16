@@ -25,6 +25,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Glossiness: 0.5
-    - _Metallic: 0
+    - _Metallic: 0.683
     m_Colors:
     - _Color: {r: 0.9125856, g: 0.9245283, b: 0.9027234, a: 1}
