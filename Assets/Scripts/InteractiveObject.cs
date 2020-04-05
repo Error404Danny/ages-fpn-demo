@@ -8,8 +8,8 @@ public class InteractiveObject : MonoBehaviour, IInteractive
     [SerializeField]
     protected string displayText = nameof(InteractiveObject);
 
-    public string DisplayText => displayText;
-    private AudioSource audioSource;
+    public virtual string DisplayText => displayText;
+    protected AudioSource audioSource;
 
     protected virtual void Awake()
     {
@@ -19,10 +19,10 @@ public class InteractiveObject : MonoBehaviour, IInteractive
     {
         try
         {
-        audioSource.Play();
+            audioSource.Play();
 
         }
-        catch (System.Exception)
+        catch (System.Exception )
         {
 
             throw new System.Exception("Missing Audio Component-Interactive Object requires an AudioSource Component to be good. Check if AudioClip is in the object");
