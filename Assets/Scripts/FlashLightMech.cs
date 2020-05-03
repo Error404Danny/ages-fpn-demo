@@ -41,7 +41,7 @@ public class FlashLightMech : MonoBehaviour
                 currentEnergy -= 0.5f * Time.deltaTime;
                 usedEnergy += 0.1f * Time.deltaTime;
             }
-            if (usedEnergy >= 50)
+            if (usedEnergy >= 18)
             {
                 batteries -= 1;
                 usedEnergy = 0;
