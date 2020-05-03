@@ -16,6 +16,8 @@ public class DetectLookAtInteractive : MonoBehaviour
     [SerializeField]
     private float maxRange = 5.0f;
 
+
+
     /// <summary>
     /// Event raised when the player looks at a different IInteractive.
     /// </summary>
@@ -64,4 +66,6 @@ public class DetectLookAtInteractive : MonoBehaviour
   
         return interactive;
     }
+
+    
 }

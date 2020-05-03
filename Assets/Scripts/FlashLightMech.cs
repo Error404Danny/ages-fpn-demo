@@ -63,6 +63,5 @@ public class FlashLightMech : MonoBehaviour
             batteries += 1;
             Destroy(batteryObject);
         }
-
     }
 }
