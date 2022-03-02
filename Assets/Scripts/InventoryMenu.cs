@@ -23,7 +23,8 @@ public class InventoryMenu : MonoBehaviour
 
     private static InventoryMenu instance;
     private CanvasGroup canvasGroup;
-    public RigidbodyFirstPersonController rigidbodyFirstPersonController;
+    private RigidbodyFirstPersonController rigidbodyFirstPersonController;
+    private InteractWithLookedAt interactWithLookedAt;
     private AudioSource audioSource;
 
 
@@ -64,6 +65,7 @@ public class InventoryMenu : MonoBehaviour
         canvasGroup.alpha = 1;
         canvasGroup.interactable = true;
         rigidbodyFirstPersonController.enabled = false;
+        interactWithLookedAt.enabled = false; 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         audioSource.Play();
@@ -75,6 +77,7 @@ public class InventoryMenu : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         rigidbodyFirstPersonController.enabled = true;
+        interactWithLookedAt.enabled = true;
         audioSource.Play();
     }
 
@@ -113,10 +116,11 @@ public class InventoryMenu : MonoBehaviour
         if (instance == null)
             instance = this;
         else
-            throw new System.Exception("There is alreay an instnace of InventoryMenu and there can only be one");
+            throw new System.Exception("There is already an instnace of InventoryMenu and there can only be one");
 
         canvasGroup = GetComponent<CanvasGroup>();
-        rigidbodyFirstPersonController = FindObjectOfType<RigidbodyFirstPersonController>();  
+        rigidbodyFirstPersonController = FindObjectOfType<RigidbodyFirstPersonController>();
+        interactWithLookedAt = FindObjectOfType<InteractWithLookedAt>();
         audioSource = GetComponent<AudioSource>();
      
     }

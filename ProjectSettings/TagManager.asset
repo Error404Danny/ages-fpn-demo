@@ -6,6 +6,13 @@ TagManager:
   tags:
   - NPC
   - Battery
+  - NPC2
+  - CP
+  - Dad
+  - Talking Door
+  - NPC3
+  - Intro
+  - Radio
   layers:
   - Default
   - TransparentFX
